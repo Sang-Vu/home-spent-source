@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta name="theme-color" content="#4CAF50" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <meta name="apple-mobile-web-app-title" content="Expense" />
+
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <link rel="icon" type="image/png" href="./icons/icon-192.png" />
+
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+
+    <title>Expense Tracker</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="expenseForm" class="container">
+            <!-- Draft summary -->
+            <div id="draftSummary" class="draft-summary"></div>
+            <div id="draftList" class="draft-list"></div>
+
+            <!-- Date -->
+            <div class="date-bar">
+                <input type="date" id="expenseDate">
+                <button class="load-btn" title="Load Data" id="loadBtn">
+                    ↻
+                </button>
+            </div>
+
+            <!-- Category -->
+            <div class="category-row">
+                <div class="segment">
+                    <input type="radio" id="food" name="category" value="food" checked>
+                    <label for="food">Food</label>
+
+                    <input type="radio" id="daily" name="category" value="daily">
+                    <label for="daily">Daily</label>
+
+                    <input type="radio" id="bills" name="category" value="bills">
+                    <label for="bills">Bills</label>
+                </div>
+            </div>
+            <!-- <div class="load-row">
+                <button class="load-btn" title="Load Data" id="loadBtn">
+                    ↻
+                </button>
+            </div> -->
+
+            <!-- Form -->
+
+            <div class="form">
+
+                <label for="amount">Amount</label>
+
+                <input id="amount" type="tel" inputmode="tel" placeholder="45+15" autocomplete="off">
+
+                <label for="note">Notes</label>
+
+                <textarea id="note" rows="4" placeholder="Bún bò, Cơm" spellcheck="false"></textarea>
+
+                <button id="saveBtn" class="save-btn" disabled>
+                    Save
+                </button>
+                <!-- <div id="validationMessage">
+                </div> -->
+                <div id="statusBar"></div>
+                <div id="syncStatus"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts">
+    </script>
+
+</body>
+
+</html>
